@@ -62,6 +62,22 @@ function App() {
           &#8594;
         </button>
       </div>
+          <div style={{ display: "flex", justifyContent: "center", marginTop: "20px", gap: "10px" }}>
+          {images.map((_, idx) => (
+            <span
+              key={idx}
+              style={{
+                width: "14px",
+                height: "14px",
+                borderRadius: "50%",
+                background: idx === startIdx ? "#333" : "#ccc",
+                display: "inline-block",
+                cursor: "pointer"
+              }}
+              onClick={() => setStartIdx(idx)}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
